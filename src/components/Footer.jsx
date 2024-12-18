@@ -2,11 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 import Logo from '../assets/logo.svg';
 import { Link } from 'react-router-dom';
-import Media from '../assets/social-media.png';
+import Fb from '../assets/fb.jpg'
+import Git from '../assets/github.jpg'
+import Google from '../assets/google.jpg'
+import Twitter from '../assets/twitter.jpg'
+import Micro from '../assets/micro.jpg'
 
 const FooterContainer = styled.div`
   background-color:#1E293B;
-  padding: 40px 100px;
+  padding: 40px 150px;
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
@@ -17,7 +21,7 @@ const FooterContainer = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 30px;
-    padding: 20px 40px;
+    padding: 20px 150px;
   }
   @media (max-width: 1280px){
     padding: 20px 130px;
@@ -41,7 +45,7 @@ const FooterContainer = styled.div`
 
 const FooterSection = styled.div`
   flex: 1;
-  min-width: 250px;
+  min-width: fit-content;
   max-width: 300px;
 
   @media (max-width: 768px) {
@@ -110,12 +114,15 @@ const StyledParagraph = styled.p`
 `;
 
 const SocialMedia = styled.div`
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+gap: 10px;
   img {
-    width: 100%;
-    max-width: 250px;
-    height: auto;
+    width: 35px;
+    height: 35px;
     margin-top: 10px;
-    border-radius: 8px;
+    border-radius: 50%;
     @media (max-width: 768px) {
       max-width: 200px;
     }
@@ -137,7 +144,7 @@ const Footer = () => {
         <FooterText>
           Empowering learners through accessible and engaging online education.
           <br />
-          Byway is a leading online learning platform dedicated to providing high-quality, flexible, and affordable
+          Byway is a leading online learning platform dedicated to providing<br/> high-quality, flexible, and affordable
           educational experiences.
         </FooterText>
       </FooterSection>
@@ -172,7 +179,21 @@ const Footer = () => {
           Mail: bywayedu@webkul.in
         </FooterText>
         <SocialMedia>
-          <img src={Media} alt="social_media" />
+          <Link to='https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F'>
+          <img src={Fb} alt="social_media" />
+          </Link>
+          <Link to='https://github.com/'>
+          <img src={Git} alt="social_media" />
+          </Link>
+          <Link to='https://www.google.com/search?gs_ssp=eJzj4tTP1TcwMU02T1JgNGB0YPBiS8_PT89JBQBASQXT&q=google&oq=google&gs_lcrp=EgZjaHJvbWUqGAgBEC4YQxiDARjHARixAxjRAxiABBiKBTIHCAAQABiPAjIYCAEQLhhDGIMBGMcBGLEDGNEDGIAEGIoFMgwIAhAjGCcYgAQYigUyBggDEEUYOzISCAQQABhDGIMBGLEDGIAEGIoFMhIIBRAAGEMYgwEYsQMYgAQYigUyEggGEAAYQxiDARixAxiABBiKBTISCAcQABhDGIMBGLEDGIAEGIoFMgcICBAAGI8CMgcICRAAGI8C0gEKMTIzNDNqMGoxNagCCLACAQ&sourceid=chrome&ie=UTF-8'>
+          <img src={Google} alt="social_media" />
+          </Link>
+          <Link to='https://x.com/?lang=en'>
+          <img src={Twitter} alt="social_media" />
+          </Link>
+          <Link to='https://www.microsoft.com/en-in'>
+          <img src={Micro} alt="social_media" />
+          </Link>
         </SocialMedia>
       </FooterSection>
     </FooterContainer>

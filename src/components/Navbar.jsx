@@ -14,17 +14,17 @@ const NavbarContainer = styled.div`
   max-width: 100%;
   background-color: #FFFFFF;
   border-bottom: 1px solid #E2E8F0;
-  padding: 10px 100px;
+  padding: 10px 150px;
 
   @media (max-width: 768px) {
     
-    padding: 10px 15px;
+    padding: 10px 150px;
   }
   @media (max-width: 1280px){
-    padding: 20px 90px;
+    padding: 20px 130px;
   }
   @media (max-width: 1080px){
-    padding: 20px 80px;
+    padding: 20px 100px;
   }
   @media (max-width: 900px){
     padding: 20px 50px;

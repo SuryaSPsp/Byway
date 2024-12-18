@@ -7,9 +7,9 @@ import Star from '../assets/star.svg';
 const BottomSection = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 20px;
-  padding: 20px;
+  padding: 20px 0;
 
   @media (max-width: 768px) {
     justify-content: center;
@@ -18,12 +18,17 @@ const BottomSection = styled.div`
 
 const CourseCard = styled.div`
   width: 270px;
+  height: 300px;
   padding: 15px;
   border-radius: 8px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items:stretch;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: white;
   cursor: pointer;
+  position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
@@ -38,8 +43,18 @@ const CourseCard = styled.div`
   @media (max-width: 768px) {
     max-width: 100%;
   }
+  @media (max-width: 768px) {
+    height:250px;
+  }
 `;
+const CourseBottom = styled.div`
+     display: flex;
+     align-items: left;
+     bottom: 10px;
+     position: absolute;
+     flex-direction: column;
 
+`;
 const CourseImage = styled.img`
   width: 100%;
   height: 150px;
@@ -161,6 +176,7 @@ const Courses = () => {
         <Link to={`/course/${product.id}`} key={product.id} style={{ textDecoration: 'none' }}>
           <CourseCard>
             <CourseImage src={product.image} alt={product.title} />
+            <CourseBottom>
             <CourseTitle>{product.title}</CourseTitle>
             <StarRating>
               {[...Array(5)].map((_, index) => (
@@ -175,6 +191,7 @@ const Courses = () => {
             </StarRating>
             <CourseType>{product.category || 'General'}</CourseType>
           <CourseCost>${product.price}</CourseCost>
+          </CourseBottom>
           </CourseCard>
         </Link>
       ))}

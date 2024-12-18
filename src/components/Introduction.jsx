@@ -9,7 +9,8 @@ const Container = styled.div`
   padding: 30px 150px;
   background-color: #fff;
   max-width: 100%;
-  margin: 0;
+  margin: 15px 0;
+  margin-bottom: 34px;
   gap: 20px;
 
   @media (max-width: 768px) {
@@ -83,7 +84,7 @@ const Paragraph = styled.p`
 
 const Button = styled.a`
   display: inline-block;
-  padding: 10px 15px;
+  padding: 13px 24px;
   background-color: #3B82F6;
   color: #fff;
   text-decoration: none;

@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 import LeftArrow from '../assets/short-arrow-left.svg';
 import RightArrow from '../assets/short-arrow-right.svg';
 import Comma from '../assets/quotes.svg';
-import Custom from '../assets/span-7.svg';
+import Custom from '../assets/span-7.png';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -89,10 +89,11 @@ const Card = styled.div`
   background: #f9f9f9;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: left;
-  margin: 0 10px;
+  margin: 0px;
   flex: 1 0 auto;
   max-width: 300px;
 
+  
   @media (max-width: 768px) {
     padding: 15px;
   }
@@ -125,11 +126,12 @@ const CardText = styled.p`
 const CustomerInfo = styled.div`
   display: flex;
   align-items: center;
+  height: auto;
   justify-content: flex-start;
 
   img {
-    width: 70px;
-    height: 61px;
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
     margin-right: 10px;
 
@@ -183,6 +185,7 @@ const SliderWrapper = styled.div`
 
   .slick-track {
     display: flex;
+    justify-content: space-between;
     gap: 20px;
     width: auto;
     flex-wrap: nowrap;  /* Prevent wrapping of items */

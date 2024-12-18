@@ -6,7 +6,7 @@ import Marketing from '../assets/marketing.svg';
 import Physics from '../assets/physics.svg';
 
 const Categories = styled.div`
-  padding: 20px;
+  padding: 0px;
   font-family: Arial, sans-serif;
 `;
 
@@ -44,12 +44,15 @@ const TopSection = styled.div`
 
 const BottomSection = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px;
 
   @media (max-width: 768px) {
     gap: 15px;
+  }
+  @media (max-width: 420px) {
+    justify-content: center;
   }
 `;
 
@@ -61,8 +64,9 @@ const CategoryCard = styled.div`
   padding: 20px;
   width: 200px;
   height: auto;
-  margin: 10px;
+  margin: 10px 0;
   border-radius: 10px;
+  cursor: pointer;
   box-shadow: 0px 0px 8px 0px #3b82f61f;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
@@ -113,6 +117,8 @@ const ImageCon = styled.div`
   align-items: center;
   padding: 20px;
   margin-bottom: 10px;
+  width: 50px;
+  height: 50px;
 
   img {
     width: 50px;

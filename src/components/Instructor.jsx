@@ -4,7 +4,7 @@ import Photo from '../assets/model-5.jpg';
 import Star from '../assets/star.svg';
 
 const Container = styled.div`
-  padding: 20px;
+  padding: 20px 0;
   max-width: 100%;
 `;
 
@@ -41,7 +41,7 @@ const TopSection = styled.div`
 const BottomSection = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 
   @media (max-width: 768px) {
     justify-content: center;
@@ -51,13 +51,15 @@ const BottomSection = styled.div`
 
 const Card = styled.div`
   width: 200px;
-  margin: 15px;
+  margin: 15px 0;
+  cursor: pointer;
   padding: 10px;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: white;
   text-align: center;
+  border: 1px solid #E2E8F0;
 
   @media (max-width: 768px) {
     width: 150px; /* Make cards take up more space on small screens */
@@ -152,7 +154,7 @@ const Instructor = () => {
         <p>See All</p>
       </TopSection>
       <BottomSection>
-        {[1, 2, 3, 4].map((_, index) => (
+        {[1, 2, 3, 4, 5].map((_, index) => (
           <Card key={index}>
             <InstructorImage src={Photo} alt="no_img" />
             <Name>Ronald Richards</Name>
